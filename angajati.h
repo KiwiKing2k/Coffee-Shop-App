@@ -40,5 +40,4 @@ class Ospatar : public Angajat
     const int salariu = 2900;
 };
 
-
 #endif //CLASSES_H
