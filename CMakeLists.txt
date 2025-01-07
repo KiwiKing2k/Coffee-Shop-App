@@ -7,4 +7,6 @@ add_executable(Coffee_Shop_App main.cpp
         angajati.h
         menu.cpp
         menu.h
+        ingrediente.cpp
+        ingrediente.h
 )
