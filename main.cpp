@@ -3,59 +3,31 @@
 #include <iostream>
 #include <fstream>
 #include "angajati.h"
+#include "ingrediente.h"
 #include "menu.h"
 using namespace std;
 
 
 int main()
 {
-    MenuDirector director;
-    RomanianMeniuBuilder roBuilder;
-    EnglishMeniuBuilder engBuilder;
+    RomanianDebaraBuilder romanian_debara_builder;
+    EnglishDebaraBuilder english_debara_builder;
+    DebaraDirector debara_director;
 
-    director.set_builder(&roBuilder);
-    Meniu roMenu = director.construct_menu();
+    debara_director.set_builder(&romanian_debara_builder);
+    Debara romanian_debara = debara_director.construct_debara();
 
-    director.set_builder(&engBuilder);
-    Meniu engMenu = director.construct_menu();
-
-    //Romanian menu
-    for (const auto& item : roMenu.cafele)
+    for (const auto& ingredient : romanian_debara.ingrediente)
     {
-        cout << "Coffee: " << item.nume << ", Price: " << item.pret << endl;
-        for (const auto& ingredient : item.nume_ingrediente)
-        {
-            cout << "Ingredient: " << ingredient << endl;
-        }
-    }
-    for (const auto& item : roMenu.bauturi)
-    {
-        cout << "Drink: " << item.nume << ", Price: " << item.pret << endl;
-    }
-    for (const auto& item : roMenu.deserturi)
-    {
-        cout << "Dessert: " << item.nume << ", Price: " << item.pret << endl;
+        cout << ingredient.nume << " " << ingredient.cantitate << " " << ingredient.cost << endl;
     }
 
-    cout<<endl;
-    cout<<endl;
+    debara_director.set_builder(&english_debara_builder);
+    Debara english_debara = debara_director.construct_debara();
 
-    //English menu
-    for (const auto& item : engMenu.cafele)
+    for (const auto& ingredient : english_debara.ingrediente)
     {
-        cout << "Coffee: " << item.nume << ", Price: " << item.pret << endl;
-        for (const auto& ingredient : item.nume_ingrediente)
-        {
-            cout << "Ingredient: " << ingredient << endl;
-        }
-    }
-    for (const auto& item : engMenu.bauturi)
-    {
-        cout << "Drink: " << item.nume << ", Price: " << item.pret << endl;
-    }
-    for (const auto& item : engMenu.deserturi)
-    {
-        cout << "Dessert: " << item.nume << ", Price: " << item.pret << endl;
+        cout << ingredient.nume << " " << ingredient.cantitate << " " << ingredient.cost << endl;
     }
 
     return 0;
