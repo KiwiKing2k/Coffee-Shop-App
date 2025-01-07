@@ -7,6 +7,7 @@ using namespace std;
 
 class Angajat
 {
+public:
     string nume;
     string ora_inceput;
     string ora_sfarsit;
@@ -16,6 +17,7 @@ class Angajat
 class Barista : public Angajat
 {
     ///mostenire
+public:
     string nume;
     string ora_inceput;
     string ora_sfarsit;
@@ -25,6 +27,7 @@ class Barista : public Angajat
 class Manager : public Angajat
 {
     ///mostenire
+public:
     string nume;
     string ora_inceput;
     string ora_sfarsit;
@@ -34,6 +37,7 @@ class Manager : public Angajat
 class Ospatar : public Angajat
 {
     ///mostenire
+public:
     string nume;
     string ora_inceput;
     string ora_sfarsit;

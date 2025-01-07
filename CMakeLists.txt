@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Coffee_Shop_App main.cpp
         angajati.h
-        cmake-build-debug/produse.h)
+)
