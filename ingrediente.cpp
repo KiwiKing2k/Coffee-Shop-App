@@ -1,5 +1,29 @@
 #include "ingrediente.h"
 
+void ConcreteObserver::stock_check()
+{
+    cout << "Stock check" << endl;
+}
+
+void Debara::register_observer(Observer* observer)
+{
+    observers.push_back(observer);
+}
+
+void Debara::remove_observer(Observer* observer)
+{
+    erase(observers, observer);
+    cout << "Observer died" << endl;
+}
+
+void Debara::notify_observers()
+{
+    for (auto& observer : observers)
+    {
+        observer->stock_check();
+    }
+}
+
 Debara RomanianDebaraBuilder::build_debara()
 {
     Debara debara;
