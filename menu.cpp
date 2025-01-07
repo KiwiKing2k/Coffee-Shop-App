@@ -2,10 +2,14 @@
 
 string parse_field(const string& line, size_t& start)
 {
+    if (start >= line.size())
+    {
+        return "empty";
+    }
     size_t end = line.find(',', start);
     if (end == string::npos)
     {
-        return "empty";
+        end = line.size();
     }
     string field = line.substr(start, end - start);
     start = end + 1;
