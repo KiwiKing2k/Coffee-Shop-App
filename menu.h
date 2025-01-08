@@ -13,17 +13,24 @@ class Ingredient
 {
 public:
     string nume;
-    int cantitate;
+    float cantitate;
     float cost;
 };
+
+typedef struct ingredient_info
+{
+    string name;
+    float cantitate_necesara;
+}ingredient_info;
 
 class Item
 {
 public:
     string nume;
     float pret;
-    vector<string> nume_ingrediente;
+    vector<ingredient_info> ingrediente_necesare;
 };
+
 
 class Meniu
 {

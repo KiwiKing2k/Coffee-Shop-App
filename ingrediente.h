@@ -41,10 +41,13 @@ class Debara : public Subject
 public:
     vector<Ingredient> ingrediente;
     vector<Observer*> observers;
+    string order_file_path;
 
     void register_observer(Observer* observer) override;
     void remove_observer(Observer* observer) override;
     void notify_observers() override;
+    void handle_order(Meniu& meniu);
+
 };
 
 class DebaraBuilderInterface

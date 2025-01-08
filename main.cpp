@@ -11,7 +11,6 @@ using namespace std;
 int main()
 {
     RomanianDebaraBuilder romanian_debara_builder;
-    EnglishDebaraBuilder english_debara_builder;
     DebaraDirector debara_director;
 
     debara_director.set_builder(&romanian_debara_builder);
@@ -19,19 +18,25 @@ int main()
     romanian_debara= debara_director.construct_debara();
     ConcreteObserver ro_observer("Observer1");
     romanian_debara.register_observer(&ro_observer);
+    romanian_debara.notify_observers();
 
-    /*for (const auto& ingredient : romanian_debara.ingrediente)
-    {
-        cout << ingredient.nume << " " << ingredient.cantitate << " " << ingredient.cost << endl;
-    }*/
+    RomanianMeniuBuilder romanian_meniu_builder;
+    MenuDirector meniu_director;
+    meniu_director.set_builder(&romanian_meniu_builder);
+    Meniu romanian_meniu= meniu_director.construct_menu();
+    romanian_debara.handle_order(romanian_meniu);
 
-    /*debara_director.set_builder(&english_debara_builder);
-    Debara english_debara = debara_director.construct_debara();
-
-    for (const auto& ingredient : english_debara.ingrediente)
-    {
-        cout << ingredient.nume << " " << ingredient.cantitate << " " << ingredient.cost << endl;
-    }*/
+    EnglishDebaraBuilder english_debara_builder;
+    debara_director.set_builder(&english_debara_builder);
+    Debara english_debara;
+    english_debara= debara_director.construct_debara();
+    ConcreteObserver en_observer("Observer2");
+    english_debara.register_observer(&en_observer);
+    english_debara.notify_observers();
+    EnglishMeniuBuilder english_meniu_builder;
+    meniu_director.set_builder(&english_meniu_builder);
+    Meniu english_meniu= meniu_director.construct_menu();
+    english_debara.handle_order(english_meniu);
 
 
 

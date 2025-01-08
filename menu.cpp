@@ -27,7 +27,7 @@ Meniu RomanianMeniuBuilder::build_meniu()
             throw runtime_error("Could not open the file!");
         }
         string line;
-
+        getline(file, line); //skip first
         while (getline(file, line))
         {
             Item read_item;
@@ -36,10 +36,15 @@ Meniu RomanianMeniuBuilder::build_meniu()
             read_item.nume = parse_field(line, start);
             read_item.pret = stof(parse_field(line, start));
             string read = parse_field(line, start);
+            string read2 = parse_field(line, start);
             while (read != "empty")
             {
-                read_item.nume_ingrediente.push_back(read);
+                ingredient_info ingredient;
+                ingredient.name = read;
+                ingredient.cantitate_necesara = stof(read2);
+                read_item.ingrediente_necesare.push_back(ingredient);
                 read = parse_field(line, start);
+                read2 = parse_field(line, start);
             }
             if (type == "cafele")
             {
@@ -77,7 +82,7 @@ Meniu EnglishMeniuBuilder::build_meniu()
             throw runtime_error("Could not open the file!");
         }
         string line;
-
+        getline(file, line); //skip first
         while (getline(file, line))
         {
             Item read_item;
@@ -86,10 +91,17 @@ Meniu EnglishMeniuBuilder::build_meniu()
             read_item.nume = parse_field(line, start);
             read_item.pret = stof(parse_field(line, start));
             string read = parse_field(line, start);
+            string read2 = parse_field(line, start);
             while (read != "empty")
             {
-                read_item.nume_ingrediente.push_back(read);
+                string ingredient_name = read;
+                float ingredient_quantity = stof(read2);
+                ingredient_info ingredient;
+                ingredient.name = ingredient_name;
+                ingredient.cantitate_necesara = ingredient_quantity;
+                read_item.ingrediente_necesare.push_back(ingredient);
                 read = parse_field(line, start);
+                read2 = parse_field(line, start);
             }
             if (type == "coffees")
             {
