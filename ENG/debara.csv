@@ -1,5 +1,6 @@
+ingredient_name,initial_quantity,current_quantity
 coffee beans,100,50.0
-milk,200,30.0
+milk,2000,30.0
 cinnamon,50,10.0
 green tea leaves,80,20.0
 oranges,150,25.0
