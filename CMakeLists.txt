@@ -10,4 +10,5 @@ add_executable(Coffee_Shop_App main.cpp
         ingrediente.cpp
         ingrediente.h
         ENG/orders.csv
+        angajati.cpp
 )
