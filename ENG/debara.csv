@@ -1,11 +1,11 @@
-ingredient_name,initial_quantity,current_quantity
-coffee beans,100,50.0
-milk,2000,30.0
-cinnamon,50,10.0
-green tea leaves,80,20.0
-oranges,150,25.0
-flour,300,15.0
-butter,100,40.0
-sugar,200,10.0
-mascarpone,50,60.0
-eggs,100,20.0
+ingredient_name,initial_quantity,price per gram/liter
+coffee beans,1000,0.50
+milk,2000,0.03
+cinnamon,50,0.10
+green tea leaves,80,0.20
+oranges,150,0.25
+flour,300,0.015
+butter,100,0.40
+sugar,200,0.10
+mascarpone,50,0.60
+eggs,100,0.20

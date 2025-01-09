@@ -1,5 +1,5 @@
-item_name,item_quantity
-Espresso,2
-Cappuccino,1
-Latte,3
-Croissant,100
+person_name,item_name,item_quantity
+John Doe,Espresso,2
+Jane Smith,Cappuccino,1
+Alice Johnson,Latte,3
+Bob Brown,Croissant,100

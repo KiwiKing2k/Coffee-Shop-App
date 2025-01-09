@@ -1,4 +1,4 @@
-category,product_name,product_quantity,ingredient1,quantity1,ingredient2,quantity2,ingredient3,quantity3,ingredient4,quantity4
+category,product_name,price,ingredient1,quantity1,ingredient2,quantity2,ingredient3,quantity3,ingredient4,quantity4, etc.
 coffees,Espresso,10,coffee beans,10,
 coffees,Latte,12,milk,50,coffee beans,5,
 coffees,Cappuccino,15,milk,50,coffee beans,5,cinnamon,1,

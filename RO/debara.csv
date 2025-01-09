@@ -1,11 +1,11 @@
-ingredient_name,initial_quantity,price per unit
-boabe de cafea,100,50.0
-lapte,2000,30.0
-scortisoara,50,10.0
-frunze de ceai verde,80,20.0
-portocale,150,25.0
-faina,300,15.0
-unt,100,40.0
-zahar,200,10.0
-mascarpone,50,60.0
-oua,100,20.0
+ingredient_name,initial_quantity,price per gram/liter
+boabe de cafea,1000,0.50
+lapte,2000,0.03
+scortisoara,50,0.10
+frunze de ceai verde,80,0.20
+portocale,150,0.25
+faina,300,0.015
+unt,100,0.40
+zahar,200,0.10
+mascarpone,50,0.60
+oua,100,0.20
