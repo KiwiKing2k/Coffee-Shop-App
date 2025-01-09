@@ -21,7 +21,10 @@ Meniu RomanianMeniuBuilder::build_meniu()
     Meniu meniu;
     try
     {
-        ifstream file("../RO/produse.csv");
+        string file_path;
+        cout << "Introduceti calea catre fisierul cu meniu:" << endl;
+        cin >> file_path;
+        ifstream file(file_path);
         if (!file.is_open())
         {
             throw runtime_error("Could not open the file!");
@@ -76,7 +79,10 @@ Meniu EnglishMeniuBuilder::build_meniu()
     Meniu meniu;
     try
     {
-        ifstream file("../ENG/produse.csv");
+        string file_path;
+        cout << "Enter the path to the menu file:" << endl;
+        cin >> file_path;
+        ifstream file(file_path);
         if (!file.is_open())
         {
             throw runtime_error("Could not open the file!");

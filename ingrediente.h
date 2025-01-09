@@ -7,13 +7,17 @@
 #include <fstream>
 #include <stdexcept>
 #include "menu.h"
+#include "angajati.h"
 using namespace std;
 
 class Observer
 {
     /// observer interface
 public:
-    virtual void stock_check() = 0; /// will check all the ingredients, but before the rewrite of the csv
+    virtual void stock_check(vector<Ingredient> ingrediente) = 0; /// will check all the ingredients, but
+    // before the
+    // rewrite of the
+    // csv
     virtual ~Observer() = default;
 };
 
@@ -23,7 +27,7 @@ private:
     string name;
 public:
     ConcreteObserver(const std::string& name) : name(name) {}
-    void stock_check() override;
+    void stock_check(vector<Ingredient> ingrediente) override;
 };
 
 class Subject
@@ -46,7 +50,9 @@ public:
     void register_observer(Observer* observer) override;
     void remove_observer(Observer* observer) override;
     void notify_observers() override;
-    void handle_order(Meniu& meniu);
+    void handle_order(Meniu& meniu, float &total_profit, float &total_cost, vector<client_info>& clients);
+    void handle_special_order(Meniu& meniu, float &total_profit, float &total_cost);
+    void save_list(string file_path);
 
 };
 
