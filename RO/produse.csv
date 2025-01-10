@@ -1,4 +1,4 @@
-category,product_name,price,ingredient1,quantity1,ingredient2,quantity2,ingredient3,quantity3,ingredient4,quantity4, etc.
+categorie,nume_produs,pret,ingredient1,cantitate1,ingredient2,cantitate2,ingredient3,cantitate3,ingredient4,cantitate4, etc.
 cafele,Espresso,10,boabe de cafea,10,
 cafele,Latte,12,lapte,50,boabe de cafea,5,
 cafele,Cappuccino,15,lapte,50,boabe de cafea,5,scortisoara,1,

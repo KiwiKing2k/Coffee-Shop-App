@@ -1,5 +1,4 @@
-ingredient_name,initial_quantity,price per gram/liter
-boabe de cafea,1000,0.50
+nume_ingredient,cantitate_initiala,pret per gram/litruboabe de cafea,1000,0.50
 lapte,2000,0.03
 scortisoara,50,0.10
 frunze de ceai verde,80,0.20
