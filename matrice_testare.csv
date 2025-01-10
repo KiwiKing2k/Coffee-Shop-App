@@ -1,21 +1,21 @@
 ID Test,Functionalitate,Descriere Test,Asteptari,Rezultat
 1,Compilare,Testare compilare,Aplicatia se compileaza cu succes, Succes
-2,Selectare limba,Testare selectare limba romana,Aplicatia continua in limba romana, Succes(dar outputul are prima linie din csv in engleza)
+2,Selectare limba,Testare selectare limba romana,Aplicatia continua in limba romana, Succes
 3,Selectare oras,Testare selectare oras Bucuresti,Aplicatia continua cu fisierele pentru Bucuresti,Succes
 4,Selectare oras,Testare selectare oras Constanta,Aplicatia continua cu fisierele pentru Constanta,Succes
 5,Selectare oras,Testare selectare oras Iasi,Aplicatia continua cu fisierele pentru Iasi,Succes
 6,Selectare oras,Testare selectare oras Timisoara,Aplicatia continua cu fisierele pentru Timisoara,Succes
-7,Gestionare comanda,Testare gestionare comanda in romana,Aplicatia continua in romana si se construiect clase romane,Succes
+7,Gestionare comanda,Testare gestionare comanda in romana,Aplicatia continua in romana si se construiesc clase romane,Succes
 8,Gestionare comanda,Testare gestionare comanda in engleza,Aplicatia continua in engleza si se construiesc clase in engleza,Succes
 9,Gestionare comanda speciala,Testare gestionare comanda speciala in romana,Comanda este gestionata iar debaraua(clasa) este actualizata,Succes
 10,Gestionare comanda speciala,Testare gestionare comanda speciala in engleza,Comanda este gestionata iar debaraua(clasa) este actualizata,Succes
 11,Citire angajati,Testare citire fisier angajati in romana, ../RO/angajati.csv este citit,Succes
 12,Citire angajati,Testare citire fisier angajati in engleza, ../ENG/team.csv este citit,Succes
-13,Afisare angajati,Testare afisare angajati  in romana, ../RO/angajati.csv este citit,Succes
-14,Afisare angajati,Testare afisare angajati  in engleza, ../ENG/team.csv este citit,Succes
+13,Afisare angajati,Testare afisare angajati  in romana, Angajatii sunt afisati impreuna cu programul de lucru in romana,Succes
+14,Afisare angajati,Testare afisare angajati  in engleza, Angajatii sunt afisati impreuna cu programul de lucru in engleza,Succes
 15,Observer,Testare functionalitate Observer,Suntem anuntati ca untul este putin,Succes
-16,Afisare angajati,Testare afisare angajati manageri in engleza, ../ENG/team.csv este citit,Succes
-17,Afisare angajati,Testare afisare angajati ospatari in romana, ../RO/angajati.csv este citit,Succes
-18,Salvare lista ingrediente,Testare salvare lista ingrediente in romana, ../RO/lista_salvata.csv,Succes
+16,Afisare angajati,Testare afisare angajati manageri in engleza,Manageri afisati individual in engleza,Succes
+17,Afisare angajati,Testare afisare angajati ospatari in romana,Manageri afisati individual in romana,Succes
+18,Salvare lista ingrediente,Testare salvare lista ingrediente in romana, ../RO/lista_salvata.csv,Succes(dar prima linie din csv e in engleza)
 19,Nesalvare lista ingrediente,Testare continuare fara salvare ingrediente in romana,Aplicatia se termina cu cod 0,Succes
 20,Cost si Profit calculat corect,Testare logica de calcul,Aplicatia da profit 5571 si cost 2091.1,Succes
