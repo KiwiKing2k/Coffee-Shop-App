@@ -17,6 +17,16 @@ int main()
     cout<<"2. Engleza"<<endl;
     int choice;
     cin>>choice;
+    cout<<"Alegeti orasul cafenelei:"<<endl;
+    cout<<"In urmatoarele etape alegeti fisierele potrivite orasului ales:"<<endl;
+    cout<<"1. Bucuresti"<<endl;
+    cout<<"2. Constanta"<<endl;
+    cout<<"3. Iasi"<<endl;
+    cout<<"4. Timisoara"<<endl;
+    cout<<"5. Cluj-Napoca"<<endl;
+    int city;
+    cin>>city;
+
     if (choice==1)
     {
         RomanianDebaraBuilder romanian_debara_builder;
@@ -139,7 +149,7 @@ int main()
         }
     }
 
-    // 1 ../RO/debara.csv ../RO/produse.csv ../RO/orders.csv ../RO/evenimente_speciale.csv ../RO/angajati.csv ../RO/lista_salvata.csv
-    // 2 ../ENG/debara.csv ../ENG/produse.csv ../ENG/orders.csv ../ENG/evenimente_speciale.csv ../ENG/angajati.csv ../ENG/lista_salvata.csv
+    // 1 2 ../RO/debara.csv ../RO/produse.csv ../RO/comenzi.csv ../RO/evenimente_speciale.csv ../RO/angajati.csv ../RO/lista_salvata.csv
+    // 2 2 ../ENG/store.csv ../ENG/produces.csv ../ENG/orders.csv ../ENG/special_events.csv ../ENG/team.csv ../ENG/saved_list.csv
     return 0;
 }
